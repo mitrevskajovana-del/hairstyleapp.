@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    text-align: center;
+}
+
+header {
+    background-color: pink;
+    padding: 20px;
+}
+
+nav {
+    margin: 15px;
+}
+
+nav a {
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 220px;
+    box-shadow: 0 0 10px gray;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background: pink;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.form-container {
+    margin-top: 40px;
+}
+
+input, select {
+    padding: 10px;
+    width: 250px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: pink;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hotpink;
+}
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+}

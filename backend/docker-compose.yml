@@ -1,0 +1,23 @@
+services:
+  backend:
+    build: .
+    container_name: hairlux-backend
+    ports:
+      - "5000:5000"
+    environment:
+      PORT: 5000
+      MONGO_URI: mongodb://mongo:27017/hairstyleDB
+      JWT_SECRET: hairlux-secret-key
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:7
+    container_name: hairlux-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
