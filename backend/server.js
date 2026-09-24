@@ -98,10 +98,6 @@ app.use(
   require("./routes/hairstyleRoutes")
 );
 app.use(
-  "/api/barbers",
-  require("./routes/barberRoutes")
-);
-app.use(
   "/api/reviews",
   require("./routes/reviewRoutes")
 );
