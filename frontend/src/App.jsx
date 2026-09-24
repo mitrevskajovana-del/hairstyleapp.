@@ -915,46 +915,34 @@ return (
                     >
                       Appointment date
                     </label>
-
                     <input
                       type="date"
                       min={getToday()}
                       value={date}
+                      readOnly
+                      onClick={(e) => e.target.showPicker()}
+                      onKeyDown={(e) => e.preventDefault()}
                       onChange={(e) => {
-                        const selectedDate =
-                          e.target.value;
+                        const selectedDate = e.target.value;
 
-                        setDate(
-                          selectedDate
-                        );
+                        setDate(selectedDate);
                         setTime("");
 
-                        if (
-                          selectedDate &&
-                          selectedHair
-                        ) {
+                        if (selectedDate && selectedHair) {
                           loadAvailableTimes(
                             selectedDate,
                             selectedHair
                           );
                         } else {
-                          setAvailableTimes(
-                            []
-                          );
-                          setBookedTimes(
-                            []
-                          );
-                          setWorkingHours(
-                            null
-                          );
-                          setSalonClosed(
-                            false
-                          );
+                          setAvailableTimes([]);
+                          setBookedTimes([]);
+                          setWorkingHours(null);
+                          setSalonClosed(false);
                         }
                       }}
                     />
 
-                    {/* AVAILABLE TIMES */}
+                                      {/* AVAILABLE TIMES */}
                     {date &&
                       selectedHair && (
                         <div
