@@ -78,8 +78,8 @@ function Search() {
             }}
           >
             <img
-              src={h.image}
-              alt={h.name}
+        src={`/images/hair${hairstyles.findIndex((style) => style._id === h._id) + 1}.jpg`}
+        alt={h.name}
               style={{
                 width: "100%",
                 height: "350px",

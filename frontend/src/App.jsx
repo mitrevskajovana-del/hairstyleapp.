@@ -526,8 +526,7 @@ return (
                     >
                       {hairstyle.image && (
                         <img
-                          src={hairstyle.image}
-                          alt={hairstyle.name}
+                    src={`/images/hair${hairstyles.findIndex((h) => h._id === hairstyle._id) + 1}.jpg`}
                           style={{
                             width: "100%",
                             height: "350px",
