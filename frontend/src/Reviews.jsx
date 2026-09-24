@@ -353,10 +353,10 @@ export default function Reviews() {
             </div>
           )}
 
-          {token && (
+          {token && role !== "admin" && (
             <form
-              className="review-form"
-              onSubmit={submitReview}
+                className="review-form"
+                onSubmit={submitReview}
             >
               <h2>Leave a Review</h2>
 
@@ -538,28 +538,26 @@ export default function Reviews() {
                           ).toLocaleDateString()}
                         </small>
 
-                        {isOwner && (
-                          <div className="review-actions">
+                       {isOwner && role !== "admin" && (
+                        <div className="review-actions">
                             <button
-                              type="button"
-                              onClick={() =>
+                            type="button"
+                            onClick={() =>
                                 startEditing(review)
-                              }
+                            }
                             >
-                              Edit
+                            Edit
                             </button>
 
                             <button
-                              type="button"
-                              onClick={() =>
-                                deleteReview(
-                                  review._id
-                                )
-                              }
+                            type="button"
+                            onClick={() =>
+                                deleteReview(review._id)
+                            }
                             >
-                              Delete
+                            Delete
                             </button>
-                          </div>
+                        </div>
                         )}
                       </>
                     )}

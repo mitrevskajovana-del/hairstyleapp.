@@ -659,30 +659,24 @@ return (
                            selectTopHairstyle(hairstyle._id)
                           }
                           >
-                            {hairstyle.image && (
-                              <img
-                                src={
-                                  hairstyle.image
-                                }
-                                alt={
-                                  hairstyle.name
-                                }
-                                style={{
-                                  width:
-                                    "100%",
-                                  height:
-                                    "280px",
-                                  objectFit:
-                                    "contain",
-                                  backgroundColor:
-                                    "#000",
-                                  borderRadius:
-                                    "12px",
-                                  marginBottom:
-                                    "15px",
-                                }}
-                              />
-                            )}
+                            <img
+                          src={
+                            index === 0
+                              ? "/images/hair5.jpg"
+                              : index === 1
+                              ? "/images/hair2.jpg"
+                              : "/images/hair1.jpg"
+                          }
+                          alt={hairstyle.name}
+                          style={{
+                            width: "100%",
+                            height: "280px",
+                            objectFit: "contain",
+                            backgroundColor: "#000",
+                            borderRadius: "12px",
+                            marginBottom: "15px",
+                          }}
+                        />
 
                             <div
                               style={{
