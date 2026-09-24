@@ -111,10 +111,6 @@ app.use(
   require("./routes/appointmentRoutes")
 );
 
-app.use(
-  "/api/db",
-  require("./routes/dbRoutes")
-);
 
 // ===============================
 // Root
